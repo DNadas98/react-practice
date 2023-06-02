@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../style/Countries.css";
 import CountryDetails from "./CountryDetails";
 import CountryItem from "./CountryItem";
@@ -11,13 +11,6 @@ function Countries({ countriesArray, favouriteCountryNames, setFavouriteCountryN
     setShowDetails(!showDetails);
   };
   const [currentDetails, setCurrentDetails] = useState({});
-
-  //favourites
-  useEffect(() => {
-    if (favouriteCountryNames?.length >= 1) {
-      localStorage.setItem("favourites", JSON.stringify(favouriteCountryNames));
-    }
-  }, [favouriteCountryNames]);
 
   return (
     <div className="Countries">

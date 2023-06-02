@@ -21,8 +21,7 @@ async function LoadData(setCountriesArray, setLoading) {
   const startTime = new Date().getTime();
   try {
     const data = await fetchData();
-    const sortedData = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
-    setCountriesArray(sortedData);
+    setCountriesArray(data);
   } catch (error) {
     console.error(`Failed to update data:\n${error}`);
   } finally {

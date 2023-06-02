@@ -5,7 +5,7 @@ function CountryItem({ countryDetails, toggleDetails, favouriteCountryNames, set
 
   //favourites
   const isFavourite = favouriteCountryNames.includes(countryName);
-  const toggleFavourite = async (countryName) => {
+  const toggleFavourite = (countryName) => {
     if (!isFavourite) {
       const updatedFavourites = [...favouriteCountryNames, countryName];
       setFavouriteCountryNames(updatedFavourites);
